@@ -24,7 +24,7 @@ int main() {
 		else {
 			wait(&status);
 			writeEnsea();
-			if (WIFEXITED(status) != -1){
+			if (WIFEXITED(status)){
 				afficherCode("[code exit: %d]\t",WEXITSTATUS(status));
 				}
 			else if (WIFSIGNALED(status)){
